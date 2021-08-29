@@ -1,32 +1,25 @@
-mysql> insert into AdressBookSer(FirstName, LastName, Adress, City, State, PinCode, PhoneNum, Email) values ('ABC','XYZ','A301QQ','Allahabad','UP',211001,893488,'abc@gmail.com');
-Query OK, 1 row affected (0.01 sec)
-
-mysql> describe AdressBookSer;
-+-----------+--------------+------+-----+---------+-------+
-| Field     | Type         | Null | Key | Default | Extra |
-+-----------+--------------+------+-----+---------+-------+
-| FirstName | varchar(300) | YES  |     | NULL    |       |
-| LastName  | varchar(300) | YES  |     | NULL    |       |
-| Adress    | varchar(500) | YES  |     | NULL    |       |
-| City      | varchar(300) | YES  |     | NULL    |       |
-| State     | varchar(250) | YES  |     | NULL    |       |
-| PinCode   | mediumtext   | YES  |     | NULL    |       |
-| PhoneNum  | mediumtext   | YES  |     | NULL    |       |
-| Email     | varchar(250) | YES  |     | NULL    |       |
-+-----------+--------------+------+-----+---------+-------+
-8 rows in set (0.00 sec)
-
-
-
-
-
 mysql> select * from AdressBookSer;
 +-----------+----------+--------+-----------+-------+---------+----------+---------------+
 | FirstName | LastName | Adress | City      | State | PinCode | PhoneNum | Email         |
 +-----------+----------+--------+-----------+-------+---------+----------+---------------+
 | ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
 | ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 111111  | 893488   | abc@gmail.com |
 +-----------+----------+--------+-----------+-------+---------+----------+---------------+
-2 rows in set (0.00 sec)
+3 rows in set (0.00 sec)
+
+mysql> update AdressBookSer set FirstName = 'XYZ', Adress = 'Lucknow' WHERE PinCode=111111;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AdressBookSer;
++-----------+----------+---------+-----------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress  | City      | State | PinCode | PhoneNum | Email         |
++-----------+----------+---------+-----------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ  | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ  | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| XYZ       | XYZ      | Lucknow | Allahabad | UP    | 111111  | 893488   | abc@gmail.com |
++-----------+----------+---------+-----------+-------+---------+----------+---------------+
+3 rows in set (0.00 sec)
 
 mysql>
