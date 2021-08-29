@@ -42,6 +42,38 @@ mysql> select * from AdressBookSer;
 +-----------+----------+--------+-----------+-------+---------+----------+---------------+
 2 rows in set (0.00 sec)
 
+
+
+
+
+
+
+mysql> select * from AdressBookSer;
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress | City      | State | PinCode | PhoneNum | Email         |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | A         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | B         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | C         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | D         | UP    | 211001  | 893488   | abc@gmail.com |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from AdressBookSer WHERE Adress = 'A';
+Empty set (0.00 sec)
+
+mysql> select * from AdressBookSer WHERE City = 'A';
++-----------+----------+--------+------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress | City | State | PinCode | PhoneNum | Email         |
++-----------+----------+--------+------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ | A    | UP    | 211001  | 893488   | abc@gmail.com |
++-----------+----------+--------+------+-------+---------+----------+---------------+
+1 row in set (0.00 sec)
+
+mysql>
+
 mysql>+---------------+
 3 rows in set (0.00 sec)
 
