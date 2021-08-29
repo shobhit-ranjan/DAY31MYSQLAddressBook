@@ -100,6 +100,32 @@ mysql> SELECT COUNT(*) FROM AdressBookSer;
 1 row in set (0.01 sec)
 
 
+
+
+
+
+
+
+
+
+
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[WHERE conditions]' at line 3
+mysql> SELECT * FROM AdressBookSer ORDER BY City;
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress | City      | State | PinCode | PhoneNum | Email         |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ | A         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | B         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | C         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | D         | UP    | 211001  | 893488   | abc@gmail.com |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+6 rows in set (0.00 sec)
+
+
+
 mysql>+---------------+
 3 rows in set (0.00 sec)
 
