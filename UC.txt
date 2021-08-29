@@ -74,6 +74,32 @@ mysql> select * from AdressBookSer WHERE City = 'A';
 
 mysql>
 
+
+
+mysql> use world;
+Database changed
+mysql> select * FROM AdressBookSer;
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress | City      | State | PinCode | PhoneNum | Email         |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | A         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | B         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | C         | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | D         | UP    | 211001  | 893488   | abc@gmail.com |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM AdressBookSer;
++----------+
+| COUNT(*) |
++----------+
+|        6 |
++----------+
+1 row in set (0.01 sec)
+
+
 mysql>+---------------+
 3 rows in set (0.00 sec)
 
