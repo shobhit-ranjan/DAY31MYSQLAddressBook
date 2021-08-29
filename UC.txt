@@ -19,7 +19,30 @@ mysql> select * from AdressBookSer;
 | ABC       | XYZ      | A301QQ  | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
 | ABC       | XYZ      | A301QQ  | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
 | XYZ       | XYZ      | Lucknow | Allahabad | UP    | 111111  | 893488   | abc@gmail.com |
-+-----------+----------+---------+-----------+-------+---------+----------+---------------+
++-----------+----------+---------+-----------+-------+---------+----------
+
+
+
+
+
+
+
+
+
+
+mysql> DELETE FROM AdressBookSer where FirstName = 'XYZ';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from AdressBookSer;
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| FirstName | LastName | Adress | City      | State | PinCode | PhoneNum | Email         |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
+| ABC       | XYZ      | A301QQ | Allahabad | UP    | 211001  | 893488   | abc@gmail.com |
++-----------+----------+--------+-----------+-------+---------+----------+---------------+
+2 rows in set (0.00 sec)
+
+mysql>+---------------+
 3 rows in set (0.00 sec)
 
 mysql>
