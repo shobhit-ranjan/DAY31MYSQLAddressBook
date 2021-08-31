@@ -31,7 +31,7 @@ mysql> select * from AdressBookSer;
 
 
 mysql> DELETE FROM AdressBookSer where FirstName = 'XYZ';
-Query OK, 1 row affected (0.01 sec)
+Query OK, 1 row affected  (0.01 sec)
 
 mysql> select * from AdressBookSer;
 +-----------+----------+--------+-----------+-------+---------+----------+---------------+
